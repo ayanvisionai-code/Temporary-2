@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <circle cx="60" cy="60" r="56" fill="#E5A21E" stroke="#522E14" stroke-width="3"/>
+  <circle cx="60" cy="60" r="50" fill="none" stroke="#522E14" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <path d="M42 42C44 37 56 37 60 41C64 37 76 37 78 42C80 47 70 54 60 62C50 54 40 47 42 42Z" fill="#522E14"/>
+  <path d="M30 68C38 65 52 64 60 64C68 64 82 65 90 68" stroke="#522E14" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M25 70L30 68M95 70L90 68" stroke="#522E14" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="60" y="86" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-weight="bold" font-size="13" fill="#522E14" letter-spacing="1.5">BAKEOLOGY</text>
+  <text x="60" y="98" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="6.5" fill="#522E14" letter-spacing="2">DUBLIN</text>
+</svg>

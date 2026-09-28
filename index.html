@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/images/preachers-logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preacher's Patisserie | Traditional Scottish Home Baking in Edinburgh</title>
+    <meta name="description" content="Preacher's Patisserie — traditional Scottish home baking since 1958. Sweet, savoury and coffee favourites at Lady Lawson Street, Edinburgh. Open 7 days a week." />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Preacher's Patisserie | Edinburgh Scottish Bakery & Café" />
+    <meta property="og:description" content="Traditional Scottish home baking since 1958. Handcrafted morning rolls, fresh bakes, savoury sandwiches and artisan coffee on Lady Lawson Street, Edinburgh." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:image" content="/images/chicken-caesar-wrap.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Schema.org Bakery JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Bakery",
+      "name": "Preacher's Patisserie",
+      "image": "/images/preachers-logo.jpg",
+      "telephone": "+44 7810 898476",
+      "priceRange": "£1–10",
+      "description": "Traditional Scottish home baking since 1958. Sweet, savoury and coffee favourites in Edinburgh.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "24–26 Lady Lawson Street",
+        "addressLocality": "Edinburgh",
+        "postalCode": "EH3 9DS",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 55.9458,
+        "longitude": -3.2008
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "330"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/preacherspatisserie/",
+        "https://www.facebook.com/PreachersPatisserie/"
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-preachers-cream text-preachers-ink antialiased selection:bg-preachers-blue/40 selection:text-preachers-ink min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
