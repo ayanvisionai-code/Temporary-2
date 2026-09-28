@@ -8,9 +8,9 @@ interface ReviewCardProps {
 
 export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
   return (
-    <div className="bg-preachers-cream-light rounded-3xl p-6 sm:p-7 border border-preachers-border/80 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between relative group">
+    <div className="bg-preachers-cream rounded-3xl p-6 sm:p-7 border border-preachers-border/80 shadow-soft hover:shadow-card transition-all duration-300 flex flex-col justify-between relative group">
       {/* Decorative quote stamp */}
-      <div className="absolute top-5 right-5 text-preachers-sage/50 group-hover:text-preachers-sage transition-colors">
+      <div className="absolute top-5 right-5 text-preachers-blue/40 group-hover:text-preachers-blue transition-colors">
         <Quote className="w-7 h-7 rotate-180" />
       </div>
 
@@ -26,7 +26,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
         {/* Highlight badge */}
         {review.tag && (
           <div className="mb-3">
-            <span className="inline-block bg-preachers-sage-light text-preachers-ink text-[11px] font-medium px-2.5 py-0.5 rounded-full border border-preachers-sage-mid/30">
+            <span className="inline-block bg-preachers-blue-light/70 text-preachers-blue-deep text-[11px] font-semibold px-2.5 py-0.5 rounded-full border border-preachers-blue/30">
               {review.tag}
             </span>
           </div>
@@ -41,7 +41,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
       {/* Author & Verification */}
       <div className="pt-4 mt-5 border-t border-preachers-border/60 flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <div className="w-7 h-7 rounded-full bg-preachers-blue/40 border border-preachers-blue flex items-center justify-center font-serif font-bold text-preachers-ink text-xs">
+          <div className="w-7 h-7 rounded-full bg-preachers-blue-light border border-preachers-blue flex items-center justify-center font-serif font-bold text-preachers-blue-deep text-xs">
             {review.author[0]}
           </div>
           <div>
@@ -49,7 +49,7 @@ export const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
               {review.author}
             </span>
             <span className="text-[10px] text-preachers-ink-muted flex items-center gap-1">
-              <CheckCircle2 className="w-3 h-3 text-preachers-sage-dark" />
+              <CheckCircle2 className="w-3 h-3 text-preachers-blue-dark" />
               {review.source}
             </span>
           </div>

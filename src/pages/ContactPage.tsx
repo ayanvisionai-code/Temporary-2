@@ -19,12 +19,14 @@ interface ContactPageProps {
 
 export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
   return (
-    <div className="bg-preachers-cream min-h-screen">
+    <div className="bg-preachers-blue-mist min-h-screen">
       
       {/* 1. CONTACT HERO */}
-      <section className="py-14 sm:py-20 bg-gradient-to-b from-preachers-cream-warm/80 to-preachers-cream border-b border-preachers-border text-center relative overflow-hidden">
+      <section className="py-14 sm:py-20 bg-gradient-to-b from-preachers-blue-light via-preachers-blue-pale to-preachers-blue-mist border-b border-preachers-border text-center relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-preachers-blue/20 rounded-full blur-3xl pointer-events-none -z-10" />
+
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-          <div className="inline-flex items-center gap-2 bg-preachers-sage/70 border border-preachers-sage-mid/50 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-preachers-ink">
+          <div className="inline-flex items-center gap-2 bg-preachers-blue/30 border border-preachers-blue/40 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-preachers-ink backdrop-blur-sm">
             <MapPin className="w-3.5 h-3.5 text-preachers-coral" />
             <span>Edinburgh, Scotland</span>
           </div>
@@ -49,7 +51,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-6 space-y-6 flex flex-col justify-between">
               
               {/* Main Address Card */}
-              <div className="bg-preachers-cream-light rounded-3xl p-6 sm:p-8 border border-preachers-border shadow-soft space-y-6 text-left">
+              <div className="bg-preachers-cream rounded-3xl p-6 sm:p-8 border border-preachers-border shadow-soft space-y-6 text-left">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-preachers-coral/15 text-preachers-coral flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5" />
@@ -73,7 +75,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-preachers-blue hover:bg-preachers-blue-mid text-preachers-ink font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow-soft transition-all border border-preachers-blue-dark/20"
+                    className="inline-flex items-center gap-2 bg-preachers-blue-dark hover:bg-preachers-blue-deep text-white font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow-soft transition-all"
                   >
                     <span>Get Directions</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -81,7 +83,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
 
                   <a
                     href={`tel:${BUSINESS_INFO.phone.raw}`}
-                    className="inline-flex items-center gap-2 bg-preachers-cream-warm hover:bg-preachers-sage/40 text-preachers-ink font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-preachers-border transition-colors"
+                    className="inline-flex items-center gap-2 bg-preachers-blue-fog hover:bg-preachers-blue-light text-preachers-ink font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full border border-preachers-border transition-colors"
                   >
                     <Phone className="w-3.5 h-3.5 text-preachers-coral" />
                     <span>{BUSINESS_INFO.phone.display}</span>
@@ -90,23 +92,23 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               </div>
 
               {/* Hours Card */}
-              <div className="bg-preachers-sage/35 rounded-3xl p-6 sm:p-8 border border-preachers-sage-mid/50 shadow-soft space-y-4 text-left">
+              <div className="bg-preachers-blue-light/70 rounded-3xl p-6 sm:p-8 border border-preachers-blue/40 shadow-soft space-y-4 text-left">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-preachers-sage text-preachers-sage-deep flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-preachers-blue-dark text-white flex items-center justify-center flex-shrink-0">
                       <Clock className="w-5 h-5" />
                     </div>
                     <div>
                       <h3 className="font-serif font-bold text-xl text-preachers-ink">Opening Hours</h3>
-                      <p className="text-xs text-preachers-sage-deep font-semibold">Open 7 Days a Week</p>
+                      <p className="text-xs text-preachers-blue-dark font-semibold">Open 7 Days a Week</p>
                     </div>
                   </div>
-                  <span className="bg-preachers-cream px-3 py-1 rounded-full text-xs font-bold text-emerald-800 border border-emerald-200">
+                  <span className="bg-preachers-cream px-3 py-1 rounded-full text-xs font-bold text-preachers-blue-deep border border-preachers-border shadow-xs">
                     8am – 2pm Daily
                   </span>
                 </div>
 
-                <div className="divide-y divide-preachers-sage-mid/30 text-sm">
+                <div className="divide-y divide-preachers-blue/30 text-sm">
                   {BUSINESS_INFO.hours.schedule.map((item) => (
                     <div key={item.day} className="py-2 flex items-center justify-between">
                       <span className="font-medium text-preachers-ink">{item.day}</span>
@@ -117,7 +119,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               </div>
 
               {/* Social Connect Card */}
-              <div className="bg-preachers-cream-light rounded-3xl p-6 border border-preachers-border shadow-soft flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="bg-preachers-cream rounded-3xl p-6 border border-preachers-border shadow-soft flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div className="text-center sm:text-left">
                   <p className="font-serif font-bold text-base text-preachers-ink">Follow our daily bakes</p>
                   <p className="text-xs text-preachers-ink-muted">Photos of what&apos;s fresh on the counter each morning</p>
@@ -152,8 +154,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
             <div className="lg:col-span-6 space-y-6 flex flex-col justify-between">
               
               {/* Bakery Image Card */}
-              <div className="bg-preachers-cream-light rounded-3xl p-3 border border-preachers-border shadow-soft overflow-hidden">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-preachers-cream-warm">
+              <div className="bg-preachers-cream rounded-3xl p-3 border border-preachers-border shadow-soft overflow-hidden">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-preachers-blue-fog">
                   <img 
                     src="/images/lemon-iced-biscuit.jpg" 
                     alt="Preacher's Patisserie Bakery & Scottish bakes" 
@@ -162,7 +164,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   <div className="absolute inset-0 bg-gradient-to-t from-preachers-ink/60 via-transparent to-transparent" />
                   
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <span className="bg-preachers-blue text-preachers-ink text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block mb-1">
+                    <span className="bg-preachers-blue-sky text-preachers-ink text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block mb-1 font-sans">
                       Edinburgh EH3 9DS
                     </span>
                     <p className="font-serif text-lg font-bold text-white">
@@ -176,7 +178,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
               </div>
 
               {/* Styled Interactive Google Map Card */}
-              <div className="bg-preachers-cream-light rounded-3xl p-6 border border-preachers-border shadow-soft space-y-4 text-left flex-1 flex flex-col justify-between">
+              <div className="bg-preachers-cream rounded-3xl p-6 border border-preachers-border shadow-soft space-y-4 text-left flex-1 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-serif font-bold text-lg text-preachers-ink flex items-center gap-2">
@@ -191,8 +193,8 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                   </p>
                 </div>
 
-                {/* Embedded Map iframe or Google Maps Interactive Box */}
-                <div className="rounded-2xl overflow-hidden border border-preachers-border aspect-[16/9] relative bg-preachers-cream-warm">
+                {/* Embedded Map iframe */}
+                <div className="rounded-2xl overflow-hidden border border-preachers-border aspect-[16/9] relative bg-preachers-blue-fog">
                   <iframe
                     title="Preacher's Patisserie Location"
                     src="https://maps.google.com/maps?q=Preacher's%20Patisserie%2024-26%20Lady%20Lawson%20Street%20Edinburgh%20EH3%209DS&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -202,7 +204,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     allowFullScreen={false}
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    className="w-full h-full grayscale-[25%] contrast-105"
+                    className="w-full h-full grayscale-[20%] contrast-105"
                   />
                 </div>
 
@@ -211,7 +213,7 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onNavigate }) => {
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 rounded-2xl bg-preachers-sage hover:bg-preachers-sage-mid text-preachers-ink font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-2"
+                    className="w-full py-3 rounded-2xl bg-preachers-blue-dark hover:bg-preachers-blue-deep text-white font-bold text-xs sm:text-sm transition-colors flex items-center justify-center gap-2 shadow-soft"
                   >
                     <span>Open in Google Maps App</span>
                     <ExternalLink className="w-4 h-4" />

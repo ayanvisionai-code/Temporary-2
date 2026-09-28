@@ -35,15 +35,15 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   return (
     <>
       {/* Top Editorial Utility Bar */}
-      <div className="bg-preachers-ink text-preachers-cream-warm text-xs py-2 px-4 border-b border-preachers-ink/20">
+      <div className="bg-preachers-ink text-white text-xs py-2 px-4 border-b border-white/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2 sm:gap-4 text-[11px] sm:text-xs">
-            <span className="font-semibold text-preachers-sage flex items-center gap-1.5">
+            <span className="font-semibold text-preachers-blue-sky flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-preachers-coral inline-block"></span>
               Traditional Scottish home baking since 1958
             </span>
-            <span className="hidden md:inline text-preachers-cream/30">|</span>
-            <span className="hidden md:flex items-center gap-1 text-preachers-cream/80">
+            <span className="hidden md:inline text-white/30">|</span>
+            <span className="hidden md:flex items-center gap-1 text-white/80">
               <Clock className="w-3.5 h-3.5 text-preachers-blue" />
               Open 7 days: 8am – 2pm
             </span>
@@ -52,18 +52,18 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <div className="flex items-center gap-3 sm:gap-5 text-[11px] sm:text-xs">
             <a 
               href={`tel:${BUSINESS_INFO.phone.raw}`}
-              className="flex items-center gap-1 text-preachers-cream/90 hover:text-preachers-blue transition-colors font-medium"
+              className="flex items-center gap-1 text-white/90 hover:text-preachers-blue transition-colors font-medium"
             >
               <Phone className="w-3 h-3 text-preachers-blue" />
               <span className="hidden sm:inline">{BUSINESS_INFO.phone.display}</span>
               <span className="sm:hidden">Call</span>
             </a>
-            <span className="text-preachers-cream/30">•</span>
+            <span className="text-white/30">•</span>
             <a 
               href={BUSINESS_INFO.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-preachers-cream/80 hover:text-preachers-blue transition-colors flex items-center gap-1"
+              className="text-white/80 hover:text-preachers-blue transition-colors flex items-center gap-1"
               aria-label="Instagram profile"
             >
               <Instagram className="w-3.5 h-3.5" />
@@ -78,7 +78,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
         className={`sticky top-0 z-40 transition-all duration-300 ${
           isScrolled 
             ? 'bg-preachers-cream/95 backdrop-blur-md shadow-soft py-3 border-b border-preachers-border' 
-            : 'bg-preachers-cream/85 backdrop-blur-sm py-4 border-b border-preachers-border/60'
+            : 'bg-preachers-blue-pale/90 backdrop-blur-sm py-4 border-b border-preachers-border/60'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -101,8 +101,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                   onClick={() => handleNavClick(item.id)}
                   className={`px-4 py-2 rounded-full text-sm tracking-wide transition-all relative font-medium ${
                     isActive 
-                      ? 'text-preachers-ink bg-preachers-sage/50 font-semibold shadow-xs' 
-                      : 'text-preachers-ink-muted hover:text-preachers-ink hover:bg-preachers-cream-warm'
+                      ? 'text-preachers-blue-deep bg-preachers-blue-light/70 font-semibold shadow-xs' 
+                      : 'text-preachers-ink-muted hover:text-preachers-ink hover:bg-preachers-blue-pale'
                   }`}
                 >
                   {item.label}
@@ -119,7 +119,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             {/* Call Us Quick Button */}
             <a
               href={`tel:${BUSINESS_INFO.phone.raw}`}
-              className="hidden lg:inline-flex items-center gap-1.5 text-xs font-semibold text-preachers-ink px-3.5 py-2 rounded-full bg-preachers-cream-warm hover:bg-preachers-sage/40 border border-preachers-border transition-colors"
+              className="hidden lg:inline-flex items-center gap-1.5 text-xs font-semibold text-preachers-ink px-3.5 py-2 rounded-full bg-preachers-cream hover:bg-preachers-blue-light border border-preachers-border transition-colors shadow-xs"
             >
               <Phone className="w-3.5 h-3.5 text-preachers-coral" />
               <span>Call Bakery</span>
@@ -128,16 +128,16 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             {/* Primary Action Button: Visit Us */}
             <button
               onClick={() => handleNavClick('contact')}
-              className="inline-flex items-center gap-1.5 bg-preachers-blue hover:bg-preachers-blue-mid text-preachers-ink font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-soft hover:shadow-blue-glow transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 border border-preachers-blue-dark/20"
+              className="inline-flex items-center gap-1.5 bg-preachers-blue-dark hover:bg-preachers-blue-deep text-white font-semibold text-xs sm:text-sm px-4 sm:px-5 py-2 sm:py-2.5 rounded-full shadow-soft hover:shadow-blue-glow transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Visit Us</span>
-              <ArrowRight className="w-3.5 h-3.5 text-preachers-ink" />
+              <ArrowRight className="w-3.5 h-3.5 text-white" />
             </button>
 
             {/* Mobile Menu Hamburger Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-xl text-preachers-ink hover:bg-preachers-cream-warm focus:outline-none border border-preachers-border"
+              className="md:hidden p-2 rounded-xl text-preachers-ink bg-preachers-cream hover:bg-preachers-blue-light focus:outline-none border border-preachers-border"
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <MenuIcon className="w-5 h-5" />}
@@ -153,7 +153,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div 
-            className="bg-preachers-cream rounded-t-3xl p-6 shadow-2xl border-t border-preachers-sage/50 max-h-[90vh] overflow-y-auto space-y-6"
+            className="bg-preachers-blue-fog rounded-t-3xl p-6 shadow-2xl border-t border-preachers-blue/50 max-h-[90vh] overflow-y-auto space-y-6"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -161,7 +161,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               <Logo size="sm" />
               <button 
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 rounded-full bg-preachers-cream-warm text-preachers-ink hover:bg-preachers-sage/30"
+                className="p-2 rounded-full bg-preachers-cream text-preachers-ink hover:bg-preachers-blue-light"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />
@@ -178,12 +178,12 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                     onClick={() => handleNavClick(item.id)}
                     className={`w-full text-left px-5 py-3.5 rounded-2xl text-base font-semibold flex items-center justify-between transition-colors ${
                       isActive 
-                        ? 'bg-preachers-sage text-preachers-ink shadow-xs' 
-                        : 'bg-preachers-cream-light text-preachers-ink hover:bg-preachers-cream-warm'
+                        ? 'bg-preachers-blue-dark text-white shadow-soft' 
+                        : 'bg-preachers-cream text-preachers-ink hover:bg-preachers-blue-pale border border-preachers-border'
                     }`}
                   >
                     <span>{item.label}</span>
-                    <ArrowRight className="w-4 h-4 opacity-60" />
+                    <ArrowRight className="w-4 h-4 opacity-70" />
                   </button>
                 );
               })}
@@ -194,7 +194,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               <div className="grid grid-cols-2 gap-2.5">
                 <a
                   href={`tel:${BUSINESS_INFO.phone.raw}`}
-                  className="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-preachers-blue/30 text-preachers-ink text-xs font-bold border border-preachers-blue-mid/40 hover:bg-preachers-blue/50 transition-colors"
+                  className="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-preachers-cream text-preachers-ink text-xs font-bold border border-preachers-border hover:bg-preachers-blue-light transition-colors"
                 >
                   <Phone className="w-4 h-4 text-preachers-coral" />
                   <span>Call Us</span>
@@ -203,14 +203,14 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                   href={BUSINESS_INFO.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-preachers-sage/60 text-preachers-ink text-xs font-bold border border-preachers-sage-mid/40 hover:bg-preachers-sage transition-colors"
+                  className="flex items-center justify-center gap-2 py-3 px-3 rounded-xl bg-preachers-blue-dark text-white text-xs font-bold hover:bg-preachers-blue-deep transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-preachers-sage-deep" />
+                  <MapPin className="w-4 h-4" />
                   <span>Directions</span>
                 </a>
               </div>
 
-              <div className="flex items-center justify-around py-3 px-4 rounded-xl bg-preachers-cream-warm border border-preachers-border text-xs text-preachers-ink-muted">
+              <div className="flex items-center justify-around py-3 px-4 rounded-xl bg-preachers-cream border border-preachers-border text-xs text-preachers-ink-muted">
                 <a 
                   href={BUSINESS_INFO.instagram.url}
                   target="_blank"
@@ -234,7 +234,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             </div>
 
             {/* Address & Hours banner */}
-            <div className="bg-preachers-cream-warm p-4 rounded-2xl text-xs text-preachers-ink-muted border border-preachers-border space-y-1">
+            <div className="bg-preachers-cream p-4 rounded-2xl text-xs text-preachers-ink-muted border border-preachers-border space-y-1">
               <p className="font-semibold text-preachers-ink flex items-center gap-1.5">
                 <MapPin className="w-3.5 h-3.5 text-preachers-coral" />
                 24–26 Lady Lawson Street, Edinburgh EH3 9DS

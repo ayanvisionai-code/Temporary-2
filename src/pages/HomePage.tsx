@@ -28,19 +28,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
   return (
     <div className="space-y-0">
       
-      {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 bg-gradient-to-b from-preachers-cream via-preachers-cream to-preachers-cream-warm border-b border-preachers-border">
-        {/* Subtle decorative background circles */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-preachers-blue-pale/40 rounded-full blur-3xl pointer-events-none -z-10" />
-        <div className="absolute -bottom-20 right-10 w-[450px] h-[450px] bg-preachers-sage-pale/60 rounded-full blur-2xl pointer-events-none -z-10" />
+      {/* 1. HERO SECTION — rich sky-blue gradient */}
+      <section className="relative overflow-hidden pt-8 pb-16 lg:pt-14 lg:pb-24 bg-gradient-to-br from-preachers-blue-light via-preachers-blue-pale to-preachers-blue-fog border-b border-preachers-border">
+        {/* Decorative orb — deeper blue */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[720px] h-[560px] bg-preachers-blue/20 rounded-full blur-3xl pointer-events-none -z-10" />
+        <div className="absolute -bottom-16 right-0 w-[400px] h-[400px] bg-preachers-sage/20 rounded-full blur-2xl pointer-events-none -z-10" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             
             {/* Left Column: Editorial Typography */}
             <div className="lg:col-span-6 space-y-6 text-left">
-              {/* Eyebrow badge */}
-              <div className="inline-flex items-center gap-2 bg-preachers-sage/70 border border-preachers-sage-mid/50 px-3.5 py-1.5 rounded-full shadow-xs">
+              {/* Eyebrow badge — sky blue */}
+              <div className="inline-flex items-center gap-2 bg-preachers-blue/30 border border-preachers-blue/40 px-3.5 py-1.5 rounded-full shadow-xs backdrop-blur-sm">
                 <span className="w-2 h-2 rounded-full bg-preachers-coral animate-pulse" />
                 <span className="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-preachers-ink">
                   Traditional Scottish Home Baking Since 1958
@@ -49,7 +49,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
               {/* Main Headline */}
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-preachers-ink leading-[1.12] tracking-tight">
-                Good things are <span className="italic font-cormorant font-normal text-preachers-blue-deep underline decoration-preachers-sage decoration-4 underline-offset-8">baked</span> into every day.
+                Good things are <span className="italic font-cormorant font-normal text-preachers-blue-deep underline decoration-preachers-blue decoration-4 underline-offset-8">baked</span> into every day.
               </h1>
 
               {/* Supporting Copy */}
@@ -61,7 +61,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 pt-2">
                 <button
                   onClick={() => onNavigate('menu')}
-                  className="inline-flex items-center gap-2 bg-preachers-blue hover:bg-preachers-blue-mid text-preachers-ink font-bold text-sm sm:text-base px-6 sm:px-7 py-3.5 rounded-full shadow-soft hover:shadow-blue-glow transition-all duration-200 transform hover:-translate-y-0.5 border border-preachers-blue-dark/20 group"
+                  className="inline-flex items-center gap-2 bg-preachers-blue-dark hover:bg-preachers-blue-deep text-white font-bold text-sm sm:text-base px-6 sm:px-7 py-3.5 rounded-full shadow-blue-glow hover:shadow-elevated transition-all duration-200 transform hover:-translate-y-0.5 group"
                 >
                   <span>Explore the Menu</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -69,7 +69,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
                 <button
                   onClick={() => onNavigate('contact')}
-                  className="inline-flex items-center gap-2 bg-preachers-cream-warm hover:bg-preachers-sage/40 text-preachers-ink font-semibold text-sm sm:text-base px-6 sm:px-7 py-3.5 rounded-full border border-preachers-border transition-colors duration-200"
+                  className="inline-flex items-center gap-2 bg-preachers-cream hover:bg-preachers-blue-fog text-preachers-ink font-semibold text-sm sm:text-base px-6 sm:px-7 py-3.5 rounded-full border border-preachers-border/80 shadow-soft transition-colors duration-200"
                 >
                   <MapPin className="w-4 h-4 text-preachers-coral" />
                   <span>Find Us in Edinburgh</span>
@@ -77,7 +77,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
 
               {/* Trust & Location Snippet */}
-              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-preachers-ink-muted border-t border-preachers-border/70">
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-preachers-ink-muted border-t border-preachers-border/50">
                 <div className="flex items-center gap-1.5">
                   <div className="flex text-amber-500">
                     {[...Array(5)].map((_, i) => (
@@ -94,12 +94,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Right Column: Large Editorial Image Composition */}
+            {/* Right Column: Editorial Image Composition */}
             <div className="lg:col-span-6 relative">
               <div className="relative mx-auto max-w-lg lg:max-w-none">
                 
-                {/* Main Hero Showcase Card */}
-                <div className="relative rounded-3xl overflow-hidden shadow-elevated border-2 border-preachers-border/80 bg-preachers-cream-light p-3">
+                {/* Main Hero Showcase Card — white card pops on blue bg */}
+                <div className="relative rounded-3xl overflow-hidden shadow-elevated border-2 border-preachers-border/60 bg-preachers-cream p-3">
                   <div className="relative aspect-[4/3] sm:aspect-[14/11] rounded-2xl overflow-hidden">
                     <img 
                       src="/images/chicken-caesar-wrap.jpg" 
@@ -110,7 +110,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     
                     {/* Caption Overlay */}
                     <div className="absolute bottom-4 left-4 right-4 text-white">
-                      <span className="bg-preachers-sage text-preachers-ink text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block mb-1.5 shadow-sm">
+                      <span className="bg-preachers-blue-sky text-preachers-ink text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full inline-block mb-1.5 shadow-sm">
                         Daily Fresh Special
                       </span>
                       <p className="font-serif text-lg sm:text-xl font-bold text-white drop-shadow-sm">
@@ -123,7 +123,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                {/* Overlapping Floating Badge / Card */}
+                {/* Overlapping Floating Badge */}
                 <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-preachers-cream rounded-2xl p-4 shadow-elevated border border-preachers-border max-w-[210px] hidden sm:block transform hover:-rotate-1 transition-transform">
                   <div className="flex items-center gap-2 mb-1.5">
                     <div className="w-8 h-8 rounded-full overflow-hidden border border-preachers-blue-mid flex-shrink-0">
@@ -159,31 +159,31 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 2. QUICK BUSINESS STRIP */}
-      <section className="bg-preachers-sage/35 border-b border-preachers-border py-4">
+      {/* 2. QUICK BUSINESS STRIP — medium blue */}
+      <section className="bg-preachers-blue/25 border-b border-preachers-border py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x-0 md:divide-x divide-preachers-border">
             
             <div className="flex flex-col items-center justify-center p-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-ink-muted">Location</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-blue-dark">Location</span>
               <span className="font-serif font-bold text-base sm:text-lg text-preachers-ink mt-0.5">Edinburgh</span>
               <span className="text-xs text-preachers-ink-muted">24–26 Lady Lawson St</span>
             </div>
 
             <div className="flex flex-col items-center justify-center p-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-ink-muted">Schedule</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-blue-dark">Schedule</span>
               <span className="font-serif font-bold text-base sm:text-lg text-preachers-ink mt-0.5">Open 7 Days</span>
               <span className="text-xs text-preachers-ink-muted">Monday to Sunday</span>
             </div>
 
             <div className="flex flex-col items-center justify-center p-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-ink-muted">Hours</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-blue-dark">Hours</span>
               <span className="font-serif font-bold text-base sm:text-lg text-preachers-ink mt-0.5">8:00am – 2:00pm</span>
               <span className="text-xs text-preachers-ink-muted">Fresh bakes daily</span>
             </div>
 
             <div className="flex flex-col items-center justify-center p-2">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-ink-muted">Counter</span>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-preachers-blue-dark">Counter</span>
               <span className="font-serif font-bold text-base sm:text-lg text-preachers-ink mt-0.5">Sweet · Savoury · Coffee</span>
               <span className="text-xs text-preachers-ink-muted">Scottish home baking</span>
             </div>
@@ -195,8 +195,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
       {/* Brand Marquee Ticker */}
       <BrandMarquee />
 
-      {/* 3. STORY / HERITAGE SECTION */}
-      <section className="py-16 sm:py-24 bg-preachers-cream-warm/60 border-b border-preachers-border">
+      {/* 3. STORY / HERITAGE SECTION — light blue tint */}
+      <section className="py-16 sm:py-24 bg-preachers-blue-fog border-b border-preachers-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -211,16 +211,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                       className="w-full h-full object-cover transform hover:scale-104 transition-transform duration-500"
                     />
                   </div>
-                  <div className="bg-preachers-blue-light p-5 rounded-3xl border border-preachers-blue-mid/40">
-                    <p className="font-serif font-bold text-2xl text-preachers-ink">1958</p>
-                    <p className="text-xs font-semibold text-preachers-ink-muted uppercase tracking-wider mt-0.5">
+                  <div className="bg-preachers-blue-dark p-5 rounded-3xl border border-preachers-blue-deep/30">
+                    <p className="font-serif font-bold text-2xl text-white">1958</p>
+                    <p className="text-xs font-semibold text-preachers-blue-sky uppercase tracking-wider mt-0.5">
                       Established in Edinburgh
                     </p>
                   </div>
                 </div>
 
                 <div className="space-y-4 pt-6">
-                  <div className="bg-preachers-sage p-5 rounded-3xl border border-preachers-sage-mid/40">
+                  <div className="bg-preachers-blue-light p-5 rounded-3xl border border-preachers-blue/30">
                     <p className="font-cormorant italic text-lg text-preachers-ink leading-snug">
                       &ldquo;Traditional Scottish home baking since 1958.&rdquo;
                     </p>
@@ -238,7 +238,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             {/* Story Content */}
             <div className="lg:col-span-6 space-y-6 text-left order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-preachers-sage-dark">
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-preachers-blue-dark">
                 <span>✦</span>
                 <span>Our Story</span>
               </div>
@@ -256,9 +256,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 </p>
               </div>
 
-              {/* Heritage Points */}
+              {/* Heritage Points — white cards on blue bg */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-preachers-cream-light border border-preachers-border">
+                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-preachers-cream border border-preachers-border shadow-soft">
                   <div className="w-8 h-8 rounded-full bg-preachers-blue-light text-preachers-blue-dark flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Cake className="w-4 h-4" />
                   </div>
@@ -268,7 +268,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-preachers-cream-light border border-preachers-border">
+                <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-preachers-cream border border-preachers-border shadow-soft">
                   <div className="w-8 h-8 rounded-full bg-preachers-sage-light text-preachers-sage-dark flex items-center justify-center flex-shrink-0 mt-0.5">
                     <UtensilsCrossed className="w-4 h-4" />
                   </div>
@@ -282,7 +282,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="pt-2">
                 <button
                   onClick={() => onNavigate('contact')}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-preachers-ink hover:text-preachers-blue-deep transition-colors group"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-preachers-blue-dark hover:text-preachers-blue-deep transition-colors group"
                 >
                   <span>Visit our bakery on Lady Lawson Street</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -295,8 +295,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 4. SIGNATURE FOOD SECTION */}
-      <section className="py-16 sm:py-24 bg-preachers-cream border-b border-preachers-border">
+      {/* 4. SIGNATURE FOOD SECTION — white cards on mid-blue bg */}
+      <section className="py-16 sm:py-24 bg-preachers-blue-mist border-b border-preachers-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Header */}
@@ -316,7 +316,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             <button
               onClick={() => onNavigate('menu')}
-              className="inline-flex items-center gap-2 text-sm font-bold text-preachers-ink bg-preachers-sage/60 hover:bg-preachers-sage px-5 py-2.5 rounded-full border border-preachers-sage-mid/40 transition-all self-start md:self-auto group"
+              className="inline-flex items-center gap-2 text-sm font-bold text-white bg-preachers-blue-dark hover:bg-preachers-blue-deep px-5 py-2.5 rounded-full shadow-soft transition-all self-start md:self-auto group"
             >
               <span>View Full Menu</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -337,8 +337,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 5. MENU PREVIEW SECTION */}
-      <section className="py-16 sm:py-24 bg-preachers-cream-warm/40 border-b border-preachers-border">
+      {/* 5. MENU PREVIEW SECTION — pale blue */}
+      <section className="py-16 sm:py-24 bg-preachers-blue-pale border-b border-preachers-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-14 space-y-3">
@@ -353,11 +353,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </p>
           </div>
 
-          {/* 3 Column Category Showcase */}
+          {/* 3 Column Category Showcase — white cards on pale blue bg */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* SWEET */}
-            <div className="bg-preachers-cream-light rounded-3xl p-7 border border-preachers-border shadow-soft flex flex-col justify-between">
+            <div className="bg-preachers-cream rounded-3xl p-7 border border-preachers-border shadow-soft flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-preachers-border">
                   <div className="flex items-center gap-2.5">
@@ -394,7 +394,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="pt-6 mt-6 border-t border-preachers-border/60">
                 <button
                   onClick={() => onNavigate('menu')}
-                  className="w-full py-2.5 rounded-xl bg-preachers-cream-warm hover:bg-preachers-coral-light text-preachers-ink font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 rounded-xl bg-preachers-blue-fog hover:bg-preachers-blue-light text-preachers-ink-light font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 border border-preachers-border"
                 >
                   <span>Explore Sweet Bakes</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -402,9 +402,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* SAVOURY */}
-            <div className="bg-preachers-cream-light rounded-3xl p-7 border-2 border-preachers-sage-mid/60 shadow-card flex flex-col justify-between relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-preachers-sage text-preachers-ink text-[10px] font-bold uppercase tracking-widest px-3 py-0.5 rounded-full shadow-xs border border-preachers-sage-dark/20">
+            {/* SAVOURY — featured card: slightly deeper border */}
+            <div className="bg-preachers-cream rounded-3xl p-7 border-2 border-preachers-blue-mid/50 shadow-card flex flex-col justify-between relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-preachers-blue-dark text-white text-[10px] font-bold uppercase tracking-widest px-3 py-0.5 rounded-full shadow-xs">
                 Lunch & Breakfast
               </div>
 
@@ -444,7 +444,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="pt-6 mt-6 border-t border-preachers-border/60">
                 <button
                   onClick={() => onNavigate('menu')}
-                  className="w-full py-2.5 rounded-xl bg-preachers-sage hover:bg-preachers-sage-mid text-preachers-ink font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 rounded-xl bg-preachers-blue-dark hover:bg-preachers-blue-deep text-white font-bold text-xs transition-colors flex items-center justify-center gap-1.5"
                 >
                   <span>Explore Savoury Menu</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -453,7 +453,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
 
             {/* COFFEE */}
-            <div className="bg-preachers-cream-light rounded-3xl p-7 border border-preachers-border shadow-soft flex flex-col justify-between">
+            <div className="bg-preachers-cream rounded-3xl p-7 border border-preachers-border shadow-soft flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-preachers-border">
                   <div className="flex items-center gap-2.5">
@@ -490,7 +490,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <div className="pt-6 mt-6 border-t border-preachers-border/60">
                 <button
                   onClick={() => onNavigate('menu')}
-                  className="w-full py-2.5 rounded-xl bg-preachers-cream-warm hover:bg-preachers-blue-light text-preachers-ink font-semibold text-xs transition-colors flex items-center justify-center gap-1.5"
+                  className="w-full py-2.5 rounded-xl bg-preachers-blue-fog hover:bg-preachers-blue-light text-preachers-ink-light font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 border border-preachers-border"
                 >
                   <span>Explore Coffee & Drinks</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -504,7 +504,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="text-center mt-12">
             <button
               onClick={() => onNavigate('menu')}
-              className="inline-flex items-center gap-2 bg-preachers-blue hover:bg-preachers-blue-mid text-preachers-ink font-bold text-base px-8 py-3.5 rounded-full shadow-soft hover:shadow-blue-glow transition-all duration-200 border border-preachers-blue-dark/20 group"
+              className="inline-flex items-center gap-2 bg-preachers-blue-dark hover:bg-preachers-blue-deep text-white font-bold text-base px-8 py-3.5 rounded-full shadow-blue-glow hover:shadow-elevated transition-all duration-200 group"
             >
               <span>View Full Menu & Counter Offerings</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -514,8 +514,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 6. SOCIAL PROOF & GOOGLE RATINGS */}
-      <section className="py-16 sm:py-24 bg-preachers-cream border-b border-preachers-border">
+      {/* 6. SOCIAL PROOF & GOOGLE RATINGS — lighter blue tint for contrast */}
+      <section className="py-16 sm:py-24 bg-preachers-blue-fog border-b border-preachers-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
@@ -542,43 +542,44 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* 7. VISIT US / COME BY FOR SOMETHING GOOD */}
-      <section className="py-16 sm:py-24 bg-preachers-sage/40 border-b border-preachers-border relative overflow-hidden">
+      {/* 7. VISIT US — deep blue panel, strongest brand statement */}
+      <section className="py-16 sm:py-24 bg-preachers-blue-light border-b border-preachers-border relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-preachers-cream-light rounded-3xl p-8 sm:p-12 lg:p-16 border-2 border-preachers-sage-mid/50 shadow-elevated relative overflow-hidden">
+          <div className="bg-preachers-ink rounded-3xl p-8 sm:p-12 lg:p-16 border-2 border-preachers-blue-mid/30 shadow-elevated relative overflow-hidden">
             
-            {/* Background decorative watermark */}
-            <div className="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-preachers-sage/30 pointer-events-none" />
+            {/* Background decorative orb */}
+            <div className="absolute -right-16 -bottom-16 w-72 h-72 rounded-full bg-preachers-blue-dark/30 pointer-events-none" />
+            <div className="absolute -left-16 top-0 w-64 h-64 rounded-full bg-preachers-blue/20 pointer-events-none blur-2xl" />
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
               
               <div className="lg:col-span-7 space-y-6 text-left">
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-preachers-sage-deep">
+                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-preachers-blue-sky">
                   <MapPin className="w-3.5 h-3.5 text-preachers-coral" />
                   <span>Lady Lawson Street, Edinburgh</span>
                 </div>
 
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-preachers-ink leading-tight">
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   Come by for something good.
                 </h2>
 
-                <p className="text-preachers-ink-muted text-base sm:text-lg leading-relaxed max-w-xl">
+                <p className="text-preachers-blue-sky/90 text-base sm:text-lg leading-relaxed max-w-xl">
                   Whether you&apos;re popping in for a morning coffee and hot roll, picking up traditional sweet bakes, or stopping by for lunch, we&apos;re delighted to welcome you.
                 </p>
 
-                {/* Details Box */}
+                {/* Details */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   <div className="space-y-1">
-                    <p className="text-xs font-bold text-preachers-ink uppercase tracking-wider">Address</p>
-                    <p className="text-sm font-semibold text-preachers-ink-light">
+                    <p className="text-xs font-bold text-preachers-blue-sky uppercase tracking-wider">Address</p>
+                    <p className="text-sm font-semibold text-white/90">
                       24–26 Lady Lawson Street<br />
                       Edinburgh EH3 9DS
                     </p>
                   </div>
 
                   <div className="space-y-1">
-                    <p className="text-xs font-bold text-preachers-ink uppercase tracking-wider">Opening Hours</p>
-                    <p className="text-sm font-semibold text-preachers-ink-light">
+                    <p className="text-xs font-bold text-preachers-blue-sky uppercase tracking-wider">Opening Hours</p>
+                    <p className="text-sm font-semibold text-white/90">
                       Open 7 Days a Week<br />
                       8:00 AM – 2:00 PM
                     </p>
@@ -591,15 +592,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                     href={BUSINESS_INFO.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-preachers-blue hover:bg-preachers-blue-mid text-preachers-ink font-bold text-sm sm:text-base px-6 py-3.5 rounded-full shadow-soft hover:shadow-blue-glow transition-all duration-200 border border-preachers-blue-dark/20"
+                    className="inline-flex items-center gap-2 bg-preachers-blue hover:bg-preachers-blue-mid text-preachers-ink font-bold text-sm sm:text-base px-6 py-3.5 rounded-full shadow-blue-glow transition-all duration-200"
                   >
-                    <MapPin className="w-4 h-4 text-preachers-ink" />
+                    <MapPin className="w-4 h-4" />
                     <span>Get Directions</span>
                   </a>
 
                   <a
                     href={`tel:${BUSINESS_INFO.phone.raw}`}
-                    className="inline-flex items-center gap-2 bg-preachers-cream hover:bg-preachers-sage/30 text-preachers-ink font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full border border-preachers-border transition-colors duration-200"
+                    className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-full border border-white/20 transition-colors duration-200"
                   >
                     <Phone className="w-4 h-4 text-preachers-coral" />
                     <span>Call Preacher&apos;s</span>
@@ -607,9 +608,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Store & Food Visual preview */}
+              {/* Store Visual preview */}
               <div className="lg:col-span-5">
-                <div className="relative rounded-3xl overflow-hidden shadow-card border border-preachers-border aspect-[4/3] bg-preachers-cream-warm">
+                <div className="relative rounded-3xl overflow-hidden shadow-card border border-white/10 aspect-[4/3] bg-preachers-blue-dark">
                   <img 
                     src="/images/kimchi-cheese-toastie.jpg" 
                     alt="Toasted Kimchi and Cheese Sourdough at Preacher's Patisserie" 

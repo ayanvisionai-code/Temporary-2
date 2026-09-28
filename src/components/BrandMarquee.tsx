@@ -14,7 +14,7 @@ export const BrandMarquee: React.FC = () => {
   ];
 
   return (
-    <div className="bg-preachers-sage/50 text-preachers-ink py-3 border-y border-preachers-sage-dark/20 overflow-hidden select-none relative">
+    <div className="bg-preachers-blue-light/80 text-preachers-ink py-3 border-y border-preachers-blue/40 overflow-hidden select-none relative">
       <div className="flex w-max animate-marquee whitespace-nowrap">
         {[...items, ...items, ...items].map((item, index) => (
           <div key={index} className="flex items-center mx-5 sm:mx-7">
